@@ -9,7 +9,7 @@
 
   const P = window.LigaData.players.slice().map(p => ({
     id: p.id, name: p.name, club: p.club, pos: p.pos,
-    goles: p.goles, asist: p.asist, defensa: p.defensa, ata: p.ata,
+    goles: p.goles, asist: p.asist, defensa: p.defensa, ata: p.atajadas ?? p.ata ?? 0,
     msg: p.msg, pts: L.playerPts(p)
   }));
 

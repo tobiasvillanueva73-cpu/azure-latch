@@ -21,7 +21,8 @@ window.ligaPoints = {
   playerPts(p) {
     const f = this.form;
     // Atajadas: los porteros las cuentan mejor (maquinaria de seguridad)
-    const atajadas = p.pos === "Portero" ? p.ata * 1.4 : p.ata;
+    const ata = p.atajadas ?? p.ata ?? 0;
+    const atajadas = p.pos === "Portero" ? ata * 1.4 : ata;
     // Bonus de posición: porteros y delanteros detectan riesgos/goles, defensas lo tienen difícil en empates.
     const posBonus = { Portero: 2, Delantero: 2, Defensa: 1, Mediocampista: 1 }[p.pos] || 0;
     return (

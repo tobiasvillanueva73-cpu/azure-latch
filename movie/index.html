@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Azure Latch — La Película</title>
+  <meta name="description" content="Azure Latch: 16 clubes, 3 episodios, un solo campeón. Sitio oficial estilo película.">
+  <link rel="stylesheet" href="css/movie.css">
+</head>
+<body>
+  <!-- ══ Header ══ -->
+  <header class="top-header">
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">☰</button>
+    <a class="mini-logo" href="#top"><span>AZURE</span> LATCH</a>
+    <nav class="top-links" id="top-links"></nav>
+  </header>
+
+  <!-- ══ Nav lateral ══ -->
+  <aside class="side-nav" id="side-nav"></aside>
+
+  <!-- ══ Contenido ══ -->
+  <div class="content">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero-inner">
+        <div class="hero-kicker" id="hero-kicker"></div>
+        <h1 class="hero-logo" id="hero-logo"></h1>
+        <p class="hero-tag" id="hero-tag"></p>
+        <div class="hero-date" id="hero-date"></div>
+        <div class="hero-cta">
+          <a class="btn" href="#episode">▶ VER EPISODIOS</a>
+          <a class="btn ghost" href="#character">PERSONAJES</a>
+          <a class="btn ghost" href="#ticket">ENTRADAS</a>
+        </div>
+      </div>
+      <div class="scroll-cue">SCROLL ↓</div>
+    </section>
+
+    <div class="marquee"><div id="marquee-text"></div></div>
+
+    <!-- EPISODIOS -->
+    <section id="episode">
+      <div class="section-head reveal">
+        <div class="num">01 / SPECIAL</div>
+        <h2>EPISODE <em>GUIDE</em></h2>
+        <p>Tres historias conectadas. Tocá cualquier tarjeta para leer la sinopsis completa.</p>
+      </div>
+      <div class="ep-grid" id="ep-grid"></div>
+    </section>
+
+    <!-- PELÍCULA / MEDIA -->
+    <section id="movie">
+      <div class="section-head reveal">
+        <div class="num">02 / MEDIA</div>
+        <h2>MOVIE <em>&amp; CLIPS</em></h2>
+        <p>Tráileres, momentos de la liga y todo el material audiovisual.</p>
+      </div>
+      <div class="video-grid" id="video-grid"></div>
+    </section>
+
+    <!-- NOTICIAS -->
+    <section id="news">
+      <div class="section-head reveal">
+        <div class="num">03 / NEWS</div>
+        <h2>ÚLTIMAS <em>NOTICIAS</em></h2>
+      </div>
+      <div class="news-list" id="news-list"></div>
+    </section>
+
+    <!-- INTRODUCCIÓN -->
+    <section class="intro" id="introduction">
+      <div class="section-head reveal">
+        <div class="num">04 / INTRODUCTION</div>
+        <h2>QUÉ ES <em>AZURE LATCH</em></h2>
+      </div>
+      <p class="intro-lead reveal" id="intro-lead"></p>
+      <div class="ep-logos" id="ep-logos"></div>
+      <div class="intro-cols" id="intro-cols"></div>
+      <div class="illustration reveal"><span>AZURE LATCH / 2026</span></div>
+    </section>
+
+    <!-- CAST / STAFF -->
+    <section id="cast">
+      <div class="section-head reveal">
+        <div class="num">05 / CAST &amp; STAFF</div>
+        <h2>QUIÉNES <em>ESTÁN</em></h2>
+        <p>Los personajes que hacen vivir la liga y el equipo detrás de la película.</p>
+      </div>
+      <div class="cast-grid" id="cast-grid"></div>
+      <div class="staff-table" id="staff-table"></div>
+    </section>
+
+    <!-- PERSONAJES -->
+    <section id="character">
+      <div class="section-head reveal">
+        <div class="num">06 / CHARACTER</div>
+        <h2>LOS <em>PERSONAJES</em></h2>
+        <p>Filtrá por episodio y tocá un personaje para ver sus estadísticas.</p>
+      </div>
+      <div class="char-tabs" id="char-tabs"></div>
+      <div class="char-grid" id="char-grid"></div>
+    </section>
+
+    <!-- MÚSICA -->
+    <section id="music">
+      <div class="section-head reveal">
+        <div class="num">07 / MUSIC</div>
+        <h2>BANDA <em>SONORA</em></h2>
+        <p>Las canciones que acompañan cada episodio.</p>
+      </div>
+      <div class="song-list" id="song-list"></div>
+    </section>
+
+    <!-- ENTRADAS -->
+    <section id="ticket">
+      <div class="section-head reveal">
+        <div class="num">08 / TICKET</div>
+        <h2>ENTRADAS <em>2026</em></h2>
+        <p>Elegí cómo querés vivir Azure Latch.</p>
+      </div>
+      <div class="ticket-grid" id="ticket-grid"></div>
+    </section>
+
+    <!-- CRÉDITOS -->
+    <footer class="credits" id="credits">
+      <div class="big" id="credits-big"></div>
+      <div class="social-row" id="credits-social"></div>
+      <p class="legal" id="credits-legal"></p>
+      <a class="back" id="credits-back" href="../index.html"></a>
+    </footer>
+  </div>
+
+  <!-- ══ Modal ══ -->
+  <div class="modal" id="modal">
+    <div class="modal-box" id="modal-box">
+      <button class="modal-close" id="modal-close" aria-label="Cerrar">×</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="../js/data.js"></script>
+  <script src="js/movie-data.js"></script>
+  <script src="js/movie.js"></script>
+</body>
+</html>

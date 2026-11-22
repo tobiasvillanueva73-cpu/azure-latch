@@ -11,13 +11,14 @@
     { href: "tabla-clubes.html", label: "Tabla de Clubes" },
     { href: "tabla-jugadores.html", label: "Tabla de Jugadores" },
     { href: "enfrentamiento.html", label: "Enfrentamiento" },
-    { href: "reglas.html", label: "Reglas y Extras" }
+    { href: "reglas.html", label: "Reglas y Extras" },
+    { href: "movie/", label: "🎬 La Película" }
   ];
 
   // ── Nav normal ──────────────────────────────────────────
   const nav = document.querySelector(".site-nav");
   if (nav) {
-    const page = location.pathname.split("/").filter(Boolean).pop() || "index.html";
+    const page = location.pathname.includes("/movie/") ? "movie/" : (location.pathname.split("/").filter(Boolean).pop() || "index.html");
     nav.innerHTML = links
       .map(l => `<a href="${l.href}" ${page === l.href ? 'class="active"' : ""}>${l.label}</a>`)
       .join("");
@@ -26,7 +27,7 @@
   // ── Nav-box (botones quick) ─────────────────────────────
   const box = document.querySelector(".nav-box");
   if (box) {
-    const page = location.pathname.split("/").filter(Boolean).pop() || "index.html";
+    const page = location.pathname.includes("/movie/") ? "movie/" : (location.pathname.split("/").filter(Boolean).pop() || "index.html");
     box.innerHTML = links
       .map(l => `<a href="${l.href}" ${page === l.href ? 'class="active"' : ""}>${l.label}</a>`)
       .join("");
