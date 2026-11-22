@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tabla de Clubes — Azure Latch</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html"><span class="logo">🏷️</span>Azure Latch</a>
+      <nav class="site-nav"></nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="nav-box"></div>
+    <h2 class="section">Tabla de Clubes — Standing</h2>
+    <p style="color:var(--muted);font-size:14px">
+      Fórmula de PTS: <b>Goles + Asistencias + Acciones defensivas + Atajadas + Bonus(posición)</b><br>
+      Bonus por posición: 1º=5, 2º=3, 3º=1, 4º+=0
+    </p>
+    <div class="table-wrap">
+      <table class="main-table">
+        <thead>
+          <tr>
+            <th>Pos</th><th>Club</th>
+            <th class="numeric">Goles</th><th class="numeric">Asist</th>
+            <th class="numeric">Def.</th><th class="numeric">Ata.</th><th class="numeric">PTS</th>
+          </tr>
+        </thead>
+        <tbody id="standings-tbody"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer class="extras"></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/points.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/standings.js"></script>
+</body>
+</html>

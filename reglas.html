@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reglas y Extras — Azure Latch</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html"><span class="logo">🏷️</span>Azure Latch</a>
+      <nav class="site-nav"></nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="nav-box"></div>
+    <h2 class="section">Reglas — Temporada 2026</h2>
+    <ol style="color:var(--text);font-size:15px;line-height:1.8">
+      <li><strong>Tournament type:</strong> Knockout format with 16 clubs.</li>
+      <li><strong>Structure:</strong> Quarterfinals (8) → Semifinals (4) → Final (1). Only 1 winner: the best club.</li>
+      <li><strong>Points:</strong> Form: <em>Goles + Asistencias + Acciones defensivas + Atajadas + Bonus(posición)</em></li>
+      <li><strong>Game length:</strong> Standard. Matches are best-of-7 by default.</li>
+      <li><strong>Roster:</strong> Up to 10 players per club, updated monthly.</li>
+      <li><strong>Fair play:</strong> Clean tournament. No proxy abuse.</li>
+    </ol>
+
+    <h2 class="section" style="margin-top:48px">Extras</h2>
+    <div class="cards" id="extras-cards"></div>
+
+    <div class="inline-extras" id="extra-info"></div>
+  </main>
+
+  <footer class="extras"></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/nav.js"></script>
+  <script>
+  (() => {
+    const d = window.LigaData;
+    const cards = document.getElementById("extras-cards");
+    const info = document.getElementById("extra-info");
+
+    // ── Cards de links y extras ──
+    cards.innerHTML = [
+      { title: "Discord", link: d.info.links.discord, desc: "¡Únete a la comunidad!" },
+      { title: "Twitter/X", link: d.info.links.twitter, desc: "Sígueme para updates." },
+      { title: "Instagram", link: d.info.links.instagram, desc: "Contenido diario." },
+      { title: "Telegram", link: d.info.links.telegram, desc: "Alertas rápidas." },
+      { title: "Web Oficial", link: d.info.links.web, desc: "Sitio oficial de Azure Latch." }
+    ].map(c => `
+      <div class="card">
+        <h3 style="color:var(--primary);margin-top:0">${c.title}</h3>
+        <p class="stat">${c.desc}</p>
+        <a class="btn ghost" href="${c.link}" target="_blank" style="margin-top:10px">Visitar →</a>
+      </div>`).join("");
+
+    // ── Info al dar (creador, ligas asociadas) ──
+    info.innerHTML = `
+      <div class="cols" style="border-top:1px solid var(--border);padding-top:16px;display:flex;flex-wrap:wrap;gap:44px;">
+        <div class="extras-col">
+          <h4>Creador</h4>
+          <ul><li><b>Nombre:</b> ${d.info.creator.name}</li>
+              <li><a href="https://discord.gg/${d.info.creator.discord}" target="_blank">Discord: @${d.info.creator.discord}</a></li>
+              <li><a href="${d.info.creator.instagram}" target="_blank">Instagram: @${d.info.creator.instagram}</a></li></ul>
+        </div>
+        <div class="extras-col">
+          <h4>Ligas asociadas</h4>
+          <ul>${d.info.associated.map(a => `<li><a href="${a.url}" target="_blank">${a.name}</a></li>`).join("")}</ul>
+        </div>
+      </div>`;
+  })();
+  </script>
+</body>
+</html>

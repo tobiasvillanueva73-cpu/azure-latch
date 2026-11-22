@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personajes — Azure Latch</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html"><span class="logo">🏷️</span>Azure Latch</a>
+      <nav class="site-nav"></nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="nav-box"></div>
+    <h2 class="section">Personajes (Jugadores)</h2>
+    <input class="search-box" id="players-search" placeholder="Buscar personaje...">
+    <div class="table-wrap">
+      <table class="main-table">
+        <thead>
+          <tr>
+            <th>Rank</th><th>Nombre</th><th>Club</th><th>Pos.</th>
+            <th class="numeric">Goles</th><th class="numeric">Asist</th><th class="numeric">Def.</th>
+            <th class="numeric">Ata.</th><th class="numeric">PTS</th><th>Frase</th>
+          </tr>
+        </thead>
+        <tbody id="players-tbody"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer class="extras"></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/points.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/players.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clubes — Azure Latch</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html"><span class="logo">🏷️</span>Azure Latch</a>
+      <nav class="site-nav"></nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="nav-box"></div>
+    <h2 class="section">Los Clubes</h2>
+    <input class="search-box" id="clubs-search" placeholder="Buscar club...">
+    <div class="cards" id="clubs-grid"></div>
+  </main>
+
+  <footer class="extras"></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/nav.js"></script>
+  <script>
+  (() => {
+    const C = window.LigaData.clubs;
+    const grid = document.getElementById("clubs-grid");
+    const search = document.getElementById("clubs-search");
+
+    function render() {
+      const q = search.value.toLowerCase().trim();
+      const items = q ? C.filter(c => c.name.toLowerCase().includes(q)) : C;
+      grid.innerHTML = items.map(c => `
+        <div class="card">
+          <span class="photo" style="background:${c.color}">${c.name[0]}</span>
+          <h3>${c.name}</h3>
+          <p class="stat" style="color:${c.color};font-weight:700">${c.color.replace('#','').toUpperCase()}</p>
+          <p class="chip">Parte de Azure Latch</p>
+        </div>`).join("");
+    }
+    render();
+    search.addEventListener("input", render);
+  })();
+  </script>
+</body>
+</html>

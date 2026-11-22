@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enfrentamiento — Azure Latch</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html"><span class="logo">🏷️</span>Azure Latch</a>
+      <nav class="site-nav"></nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="nav-box"></div>
+    <h2 class="section">Enfrentamiento</h2>
+    <p style="color:var(--muted);font-size:14px">
+      16 clubes. Eliminatoria: Cuartos → Semifinales → Final. Un solo ganador: el mejor club.
+    </p>
+
+    <div class="champion" id="champion">👑 Selecciona los ganadores de las semifinales y el final</div>
+
+    <div class="bracket-row">
+      <div class="bracket-quarter">
+        <h3>Cuartos de final (16)</h3>
+        <div id="qf-row"></div>
+      </div>
+      <div class="bracket-semis">
+        <h3>Semifinales (4)</h3>
+        <div id="sf-row"></div>
+      </div>
+    </div>
+    <div class="bracket-final"><div id="final-row"></div></div>
+
+    <div class="recalc">
+      <button class="reinit-btn" id="reinit">🔄 Reiniciar Enfrentamiento</button>
+    </div>
+  </main>
+
+  <footer class="extras"></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/bracket.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inicio — Azure Latch</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html"><span class="logo">🏷️</span>Azure Latch</a>
+      <nav class="site-nav"></nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero"></section>
+
+    <div id="clubs-grid"></div>
+
+    <h2 class="section">Clubes (16)</h2>
+    <div class="table-wrap">
+      <table class="main-table">
+        <thead>
+          <tr>
+            <th>Pos</th><th>Club</th><th class="numeric">PTS</th><th class="numeric">Goles</th>
+            <th class="numeric">Asist</th><th class="numeric">Def.</th><th class="numeric">Ata.</th>
+          </tr>
+        </thead>
+        <tbody id="standings-tbody"></tbody>
+      </table>
+    </div>
+
+    <h2 class="section">Enfrentamiento</h2>
+    <div class="champion" id="champion"></div>
+    <div class="bracket-row">
+      <div class="bracket-quarter"><h3>Cuartos de final (16)</h3><div id="qf-row"></div></div>
+      <div class="bracket-semis"><h3>Semifinales</h3><div id="sf-row"></div></div>
+    </div>
+    <div class="bracket-final"><div id="final-row"></div></div>
+
+    <h2 class="section">Personajes</h2>
+    <div class="table-wrap">
+      <table class="main-table">
+        <thead><tr><th>Rank</th><th>Nombre</th><th>Club</th><th>Pos.</th><th class="numeric">Goles</th><th class="numeric">Asist</th><th class="numeric">Def.</th><th class="numeric">Ata.</th><th class="numeric">PTS</th><th>Dice</th></tr></thead>
+        <tbody id="players-tbody"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer class="extras"></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/points.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/standings.js"></script>
+  <script src="js/players.js"></script>
+  <script src="js/bracket.js"></script>
+</body>
+</html>
